@@ -12,7 +12,15 @@
 #define __HASHTABLE_H
 
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include "hashtable.h"
+#include "hash.h"
+#include "../set/set.h"
+#include "../lib/file.h"
+#include "../lib/mem.h"
+
+
 
 /**************** global types ****************/
 typedef struct hashtable hashtable_t;  // opaque to users of the module

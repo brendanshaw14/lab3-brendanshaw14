@@ -1,0 +1,38 @@
+gcc -Wall -pedantic -std=c11 -ggdb -DMEMTEST -I../lib settest.o set.o ../lib/file.o ../lib/mem.o  -o settest
+./settest
+Create first set...
+
+Test with null set, good item...
+test with null item...
+test with null set, null item...
+test with null key, good itemtest with null set, null key, null itemtest with null set and null keytest with null key and null item
+Count (should be zero): 0
+
+Testing set_insert...Inserting three items.
+
+The set:
+{(item3,tree),(item2,dog),(item1,cat),}
+
+Testing iterator: Count (should be 3): 3
+Testing iterator with null set: (should print 0 because itemfunc will not be used): 0
+Testing iterator with invalid itemfunc: (should print 0 again): 0
+Testing print with null itemfunc: (should print empty set): {}
+Testing print with null file: (should print nothing): 
+Testing print with null set: (should print (null)): (null)
+Printing Correctly: {(item3,tree),(item2,dog),(item1,cat),}
+
+Make a new setPut item Shay with key name1 and item Aidan withe key name2 in the set: 
+{(name2,Aidan),(name1,Shay),}
+Testing adding a duplicate key
+Duplicate found, add prevented. 
+The set after attempting to add duplicate: Should still be {Aidan,Shay,}:{(name2,Aidan),(name1,Shay),}
+Testing set_find with key in set (should find "Aidan"): Found item Aidan
+Testing set_find with key not in set: Found item (should be (null)) (null)
+Testing set_find with null set (should print (null)): (null)
+Testing set_find with null key (should print (null)): (null)
+Count items in the new set- should be 2:2
+
+Print the set: should have Shay, Aidan
+{(name2,Aidan),(name1,Shay),}
+
+delete the sets...

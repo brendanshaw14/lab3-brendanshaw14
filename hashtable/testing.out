@@ -1,0 +1,45 @@
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib -I../set   -c -o hashtabletest.o hashtabletest.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib -I../set   -c -o hashtable.o hashtable.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib -I../set   -c -o ../set/set.o ../set/set.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib -I../set hashtabletest.o hashtable.o ../lib/file.o ../lib/mem.o ../set/set.o hash.o  -o hashtabletest
+./hashtabletest
+Testing hashtable_insert with null ht- should be false: False
+Testing hashtable_insert with null key- should be false: False
+Testing hashtable_insert with null item- should be false: False
+Testing hashtable_insert with valid parameters- should be true:True
+Printing hashtable- should have only two empty slots and (name1, brendan)
+{}
+{}
+{(name1,brendan),}
+
+Testing hashtable_find with NULL hashtable- (should be (null)): Found (null)
+Testing hashtable_find with NULL key- (should be (null)): Found (null)
+Testing hashtable_find with non-existent key- (should be (null)): Found (null)
+Testing hashtable_find with "name1"- (should be brendan): Found brendan
+Making a new hashtable with some more items in it for print demos:
+Testing print with null fp- should print nothing: 
+Testing print with null ht- should print (null): (null)
+Testing print with null itemprint- should print empty hashtable: 
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+Testing valid print- should print full hashtable: {(item6,set),(item5,hashtable),}
+{}
+{(item7,counters),}
+{}
+{}
+{(item3,words),(item1,chill),}
+{(item2,histo),}
+{(item4,tinySearch),}
+
+Testing hashtable_iterate with null ht- should print 0:)
+Found: 0 items
+Testing hashtable_iterate with null itemfunc- should print 0:)
+Found: 0 items
+Testing hashtable_iterate with valid inputs- should print 7:
+Found: 7 items

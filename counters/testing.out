@@ -1,0 +1,25 @@
+./counterstest
+
+Testing invalid counter add- null counters (should print empty counters): (null)
+Initializing the counter and adding 1: {1:1,}
+Testing invalid counter add- negative key (should be the same as above): {1:1,}
+Testing counter add- duplicate key (should print {1:2,}): {1:2,}
+Making a new counters with 1, 2, and 3:{3:1,2:1,1:1,}
+
+Testing counters_get with null counters (should print 0):0
+Testing counters_get with non-existent key (should print 0):0
+Testing counters_get with valid key (should print 1):1
+
+Testing counters_set with null counter- should print false: false
+Testing counters_set with invalid key- should print false: 
+Testing counters_set with invalid counter value- should print false: false
+Printing counter again to show no changes were made by get: {3:1,2:1,1:1,}
+Testing counters_print with NULL fp- should print nothing: 
+Testing counters_print with NULL counters- should print nothing: (null)
+
+Testing counters_iterate with NULL counters- (should be 0)
+Number of counters found by iterator: 0
+Testing counters_iterate with NULL itemfunc- (should be 0)
+Number of counters found by iterator: 0
+Testing valid counters_iterate- (should be 3)
+Number of counters found by iterator: 3
